@@ -1,0 +1,166 @@
+
+body{
+    background-color: green;
+    padding-right: 40px;
+}
+
+h2, h3{
+    color: #FFD700;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: green;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h2{
+    text-align:left;
+}
+
+h3{
+    text-align:left;
+    padding-left: 50px;
+}
+
+p{
+    color: #008140;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    background-color: #FFD700;
+    padding: 10px;
+}
+
+ul, li{
+    color: #00994C;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+}
+
+a{
+    color: #FFD700;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: green;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+h1{
+    text-align: center;
+    color: #FFD700;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #f0f0f0; /* Цвет фона */
+    border-radius: 5px;
+    border: 1px solid #a0a0a0; /* Граница таблицы */
+    font-size: 12pt; /* Размер шрифта */
+    color: black;
+}
+td {
+    padding: 10px; /* Отступы для ячеек */
+    border: 1px solid #d0d0d0; /* Граница ячеек */
+}
+th {
+    padding: 10px; /* Отступы для ячеек */
+    border: 1px solid #008140; /* Граница ячеек */
+    background-color: #00994C;
+    color:#e9d97e;
+    
+}
+tr:hover {
+    background-color: #e9d97e; /* Цвет фона при наведении на строку */
+}
+
+input ,textarea{
+    counter-reset:  #00994C;
+    border: #00994C;
+    background-color: #FFD700;
+    border-radius: 5px;
+}
+
+form{
+    text-align: left;
+    padding-right: 70%;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ffe75f; /* Цвет фона кнопки при наведении */
+    color: #008140;
+}
+
+form input[type="text"],
+input[type="email"] {
+    background-color: #f0f0f0; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    border: 1px solid #ccc; /* Цвет границы */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 4px; /* Скругление углов */
+    width: 100%; /* Ширина 100% */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50; /* Цвет фона кнопки */
+    color: #ffd900; /* Цвет текста кнопки */
+    border: none; /* Убирает границу */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 4px; /* Скругление углов */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+form textarea{
+    background-color: #f0f0f0; /* Цвет фона */
+    color: #00994C; /* Цвет текста */
+    border: 1px solid #ccc; /* Цвет границы */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 4px; /* Скругление углов */
+    width: 100%; /* Ширина 100% */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+}
+
+footer p{
+    background-color: green;
+    color: #FFD700;
+}
+
+.request{
+    width: 70%;
+    background-color: green;
+    color: #008140;
+    border: 0px;
+}
+
+.request th{
+    border: 0px;
+    background-color: green;
+}
+
+.navig{
+    color: #ffd900;
+    background-color: green;
+    text-align: center;
+}
+
+#section1{
+    padding-left: 50px;
+    padding-right: 20%;
+}
+#section2{
+    padding-left: 50px;
+    padding-right: 20%;
+}
+#section3{
+    padding-left: 50px;
+    padding-right: 20%;
+}
+#aftor{
+    padding-left: 50px;
+    padding-right: 20%;
+}
+#fans{
+    padding-left: 50px;
+    padding-right: 20%;
+}
