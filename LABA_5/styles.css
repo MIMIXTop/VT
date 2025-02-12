@@ -1,0 +1,124 @@
+button{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: blue;
+    border: 0;
+    color: white;
+    transition-property: width height;
+    transition-duration: 1.5s;
+}
+
+button:hover{
+    width: 250px;
+    height: 50px;
+    animation-name: move;
+    animation-duration: 2s;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+p{
+    opacity: 0;
+    animation: fadeIn 1s infinite;
+    margin: 20px 0;
+}
+
+.logo{
+    animation: spin 2s infinite;
+}
+
+.content{
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.point{
+    text-align: center;
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    background-color: blue;
+    padding: 10px;
+    margin: 10px 20px;
+    animation: scalc 1.4s infinite both;
+}
+
+.link {
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px 20px;
+
+    background-color: rgb(0, 176, 0);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+
+    transition-property: background-color color;
+    transition-duration: 1.5s;
+}
+
+.link:hover{
+    background-color: black;
+    color: red;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes move {
+    from{
+        background-color: blue;
+    }
+    50%{background-color: blueviolet;}
+    to{
+        background-color: blue;
+    }
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scalc{
+    0%, 80%, 100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+.point:nth-child(1){
+    animation-delay: -0.32s;
+}
+.point:nth-child(2){
+    animation-delay: -0.16s;
+}
+.point:nth-child(3){
+    animation-delay: -0.1s;
+}
