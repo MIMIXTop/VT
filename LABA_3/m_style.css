@@ -1,11 +1,15 @@
 
 body{
+    --yellow-color: #FFD700;
+    --green-color: #008140;
+    --otherGreen-color: #00994C;
+    --otherYellow-color: #e9d97e;
     background-color: green;
     padding-right: 40px;
 }
 
 h2, h3{
-    color: #FFD700;
+    color: var(--yellow-color);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: green;
     border-radius: 5px;
@@ -22,114 +26,123 @@ h3{
 }
 
 p{
-    color: #008140;
+    color: var(--green-color);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 5px;
-    background-color: #FFD700;
+    background-color: var(--yellow-color);
     padding: 10px;
 }
 
 ul, li{
-    color: #00994C;
+    color: var(--otherGreen-color) ;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
     background-color: white;
-    border-radius: 10px;
 }
 
 a{
-    color: #FFD700;
+    color: var(--yellow-color);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: green;
     border-radius: 5px;
     padding: 0px;
 }
 
+a:hover{
+    color: var(--otherYellow-color);
+}
+
 h1{
     text-align: center;
-    color: #FFD700;
+    color: var(--yellow-color);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
 }
 
 table {
     border-collapse: collapse;
-    background-color: #f0f0f0; /* Цвет фона */
+    background-color: #F0F0F0; 
     border-radius: 5px;
-    border: 1px solid #a0a0a0; /* Граница таблицы */
-    font-size: 12pt; /* Размер шрифта */
+    border: 1px solid #a0a0a0; 
+    font-size: 12pt; 
     color: black;
 }
 td {
     padding: 10px; /* Отступы для ячеек */
     border: 1px solid #d0d0d0; /* Граница ячеек */
 }
+
 th {
-    padding: 10px; /* Отступы для ячеек */
-    border: 1px solid #008140; /* Граница ячеек */
-    background-color: #00994C;
-    color:#e9d97e;
+    padding: 10px; 
+    border: 1px solid var(--green-color); 
+    background-color: var(--otherGreen-color);
+    color:var(--otherYellow-color);
     
 }
+
 tr:hover {
-    background-color: #e9d97e; /* Цвет фона при наведении на строку */
+    background-color: var(--otherYellow-color); 
 }
 
 input ,textarea{
-    counter-reset:  #00994C;
-    border: #00994C;
-    background-color: #FFD700;
+    counter-reset:  var(--otherGreen-color);
+    border: var(--otherGreen-color);
+    background-color: var(--yellow-color);
     border-radius: 5px;
 }
 
 form{
+    padding-left: 50px;
     text-align: left;
-    padding-right: 70%;
+    width: 450px;
+    height: auto;
 }
 
 form input[type="submit"]:hover {
-    background-color: #ffe75f; /* Цвет фона кнопки при наведении */
-    color: #008140;
+    background-color: #ffe75f; 
+    color: var(--green-color) ;
 }
 
 form input[type="text"],
 input[type="email"] {
-    background-color: #f0f0f0; /* Цвет фона */
-    color: #333; /* Цвет текста */
-    border: 1px solid #ccc; /* Цвет границы */
-    padding: 10px; /* Внутренние отступы */
-    border-radius: 4px; /* Скругление углов */
-    width: 100%; /* Ширина 100% */
-    box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+    background: radial-gradient(white,wheat); 
+    color: #333; 
+    border: 1px solid #ccc;
+    padding: 10px; 
+    border-radius: 4px;
+    width: 100%;
 }
 
 form input[type="submit"] {
-    background-color: #4CAF50; /* Цвет фона кнопки */
-    color: #ffd900; /* Цвет текста кнопки */
-    border: none; /* Убирает границу */
-    padding: 10px 20px; /* Внутренние отступы */
-    border-radius: 4px; /* Скругление углов */
-    cursor: pointer; /* Курсор при наведении */
+    background-color: #4CAF50; 
+    color: #ffd900; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px;  
 }
 
 form textarea{
-    background-color: #f0f0f0; /* Цвет фона */
-    color: #00994C; /* Цвет текста */
-    border: 1px solid #ccc; /* Цвет границы */
-    padding: 10px; /* Внутренние отступы */
-    border-radius: 4px; /* Скругление углов */
-    width: 100%; /* Ширина 100% */
-    box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+    background: radial-gradient(white,wheat);
+    color: var(--otherGreen-color);
+    border: 1px solid #ccc;
+    padding: 10px; 
+    border-radius: 4px; 
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 footer p{
     background-color: green;
-    color: #FFD700;
+    color: var(--yellow-color);
+}
+
+video{
+    padding-left: 50px;
 }
 
 .request{
     width: 70%;
     background-color: green;
-    color: #008140;
+    color: var(--green-color);
     border: 0px;
 }
 

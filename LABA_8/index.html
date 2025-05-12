@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button id="menu">
+        <img id="menu-btn" src="image/icons8-меню-50 (1).png" alt="Меню">
+    </button>
+
+    <div id="sidebar">
+        <a href="#">Главная</a>
+        <a href="#">О проекте</a>
+        <a href="#">Документация</a>
+        <a href="#">Контакты</a>
+    </div>
+
+    <!-- Оверлей для закрытия сайдбара -->
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <p style="font-size:30px;" class="title">Какой-то умный текст <i style="font-size: 15px;">(реально умный)</i><p>
+        
+        <button id="add-btn">Скрыть</button>
+        <div id="temp-container"></div>
+        <div class="container" id="first">
+            <p id="text">Word2vec represents a word as a high-dimension vector of numbers which capture relationships between words. In particular, words which appear in similar contexts are mapped to vectors which are nearby as measured by cosine similarity. This indicates the level of semantic similarity between the words, so for example the vectors for walk and ran are nearby, as are those for "but" and "however", and "Berlin" and "Germany".</p>
+        </div>
+
+        <div class="invincible-div"></div>
+    </div>
+
+    
+    <div class="container" id="second">
+        
+        <p style="font-size:30px;" class="title">Нажми на квадрат и узнай истину<p>
+        <div id="modal">
+            <p id="text-1">Какой-то текст</p>
+            <img id="image" src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/06/06062705/Word-Vectors.png" alt="Word2Vec">
+        </div>
+
+    </div>
+    
+    <!-- Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключаем наш скрипт -->
+    <script src="src/main.js"></script>
+</body>
+</html>

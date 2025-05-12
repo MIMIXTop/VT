@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(148, 79, 152);
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+form {
+    background-color: white;
+    margin: auto;
+
+    width: 550px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+
+    border-radius: 6px;
+}
+
+#form-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#form-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    line-height: 24px;
+    margin-bottom: 2px;
+}
+
+input, textarea {
+    border-radius: 4px;
+    border: 1px solid #CCC;
+
+    padding: 10px;
+}
+
+.buttonNav{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#prev {
+    display: none;
+    text-align: center; /* Добавляем центрирование текста */
+}
+
+#prev.visible {
+    display: block; /* Изменяем на block для корректного отображения */
+}
+
+button {
+    border-radius: 4px;
+    border: none;
+    background: rgb(237, 237, 237);
+    color: black;
+    width: 100%;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    margin-top: 22px;
+    padding: 10px;
+
+    font-weight: 500;
+    line-height: 24px;
+
+    cursor: pointer;
+
+    transition-property: background-color color;
+    transition-duration: 1s;
+}
+
+button:hover{
+    color: white;
+    background-color: black ;
+}
+
+.error {
+    color: crimson;
+    margin: 0;
+
+    display: none;
+
+    margin-top: 5px;
+}
+
+textarea{
+    resize: none;
+}
+
+#step_2, #step_3{
+    display: none;
+}

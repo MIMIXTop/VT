@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List с jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>To-Do List с jQuery</h1>
+    
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Введите новую задачу..." required>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <p id="error" style="color: red; opacity: 0; display: none;">МНОГО БУКАВ!!!<br> Не надо столько букав...</p>
+    
+    <div id="sort-options">
+        <label for="sort-select">Сортировать:</label>
+        <select id="sort-select">
+            <option value="all">Все задачи</option>
+            <option value="active">Только активные</option>
+            <option value="completed">Только выполненные</option>
+        </select>
+    </div>
+    
+    <ul id="task-list"></ul>
+    
+    <script src="main.js"></script>
+</body>
+</html>

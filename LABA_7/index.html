@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма авторизации</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form novalidate>
+        <header id="form-header">
+            <h1>Регистрация</h1>
+        </header>
+        
+        <div class="formFields" >
+            <div class="field" id="step_1">
+                <label for="email">Почта</label>
+                <input type="email" name="email" placeholder="nesaxor228@.com" />
+
+                <p class="error" name="emailError">Введите почту правильно</p>
+            </div>
+
+            <div class="field" id="step_2">
+                <label for="login">Имя</label>
+                <input type="text" name="login" placeholder="lapata24" />
+
+                <p id="loginError" class="error">Длина имени должна быть больше 3</p>
+           </div>
+
+           <div class="field" id="step_3">
+                <label for="message">Сообщение</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+
+                <p class="error" id="messageError"></p>
+            </div>
+
+            <div class="buttonNav">
+                <button id="prev">Назад</button>
+                <button id="next">Далее</button>
+            </div>
+        </div>
+    </form >
+
+    <script src="script.js"></script>
+</body>
+</html>

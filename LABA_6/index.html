@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная галерея</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery">
+            <img id="gallery-image" src="Image/bascketbol.jpg" alt="image" class="gallery-image">
+        </div>
+
+        <button id="prev-button" class="prev-button">Предыдущее</button>
+        <button id="next-button" class="next-button">Следующее</button>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modal-text">Это всплывающее окно с сообщением!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
