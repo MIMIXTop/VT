@@ -15,7 +15,7 @@ async function start () {
         try {
             await fs.access('my_directory');
         } catch (err) {
-            await fs.mkdir('my_directory')
+            await fs.mkdir('my_directory');
         }
 
         await createFile(first);
