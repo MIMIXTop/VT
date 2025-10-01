@@ -2,26 +2,26 @@ import Dog from "./animals";
 
 import { Circle, Rectangle } from "./shapes";
 
-let start : number = 10;
+let start: number = 10;
 let start2 = 11;
 
-let end : boolean = true;
+let end: boolean = true;
 let end2 = false;
 
 let aftorName : string = "MIMIXTop";
 
-let vec : number[] = [1,2,3,4,5];
+let vec: number[] = [1,2,3,4,5];
 
-let obj : {
+let obj: {
     name: string;
-    age : number;  
+    age: number;  
 } = {
-    name : "MIMIXTop",
-    age : 15
+    name: "MIMIXTop",
+    age: 15
 }
 
 function sendMessage(message : string , count : number) : number {
-    //let age : number = "15";
+    //let age: number = "15";
     return 42;
 }
 
@@ -30,7 +30,7 @@ function printInfo<T>(item : T) : void {
 }
 
 class DataStore<T> {
-    vec : T[];
+    vec: T[];
     constructor(vec : T[]) {
         this.vec = vec;
     }
@@ -39,13 +39,13 @@ class DataStore<T> {
         this.vec.push(item);
     }
 
-    getAll() : T[] {
+    getAll(): T[] {
         return this.vec;
     }
 }
 
-let dog : Dog = new Dog('Grisha');
-let rec : Rectangle = new Rectangle(10, 4);
+let dog: Dog = new Dog('Grisha');
+let rec: Rectangle = new Rectangle(10, 4);
 
 dog.makeSound();
 

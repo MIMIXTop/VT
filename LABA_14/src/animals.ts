@@ -1,9 +1,9 @@
 class Animal {
-    name : string;
-    constructor (name : string) {
+    name: string;
+    constructor (name: string) {
         this.name = name;
     } 
-    makeSound() : void {}
+    makeSound(): void {}
 }
 
 export default class Dog extends Animal {
