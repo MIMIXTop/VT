@@ -11,7 +11,5 @@ fs.readFile('input.txt', 'utf-8', (err, data) => {
         if (err) {
             if(err) return console.log(err);
         }
-
-        console.log("Запись файла завершена");
     });
 });

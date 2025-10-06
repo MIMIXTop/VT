@@ -41,7 +41,7 @@ async function start () {
         await fs.unlink(second);
         console.log('\nФайл data.json удалён.');
 
-        // ● Проверяет, что file1.txt остался, а data.json удален.
+        // Проверяет, что file1.txt остался, а data.json удален.
         try {
             await fs.access(first);
             console.log('file1.txt существует.');
@@ -51,7 +51,7 @@ async function start () {
 
         try {
             await fs.access(second);
-            console.log('data.json всё ещё существует!'); // Это не должно произойти
+            console.log('data.json всё ещё существует!');
         } catch {
             console.log('data.json успешно удалён.');
         }
