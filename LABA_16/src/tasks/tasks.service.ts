@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Task } from './entities/task.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from './entities/user.untity';
+import { User } from './entities/user.entity';
 
 Repository<Task>
 
@@ -11,38 +11,54 @@ export class TasksService {
     constructor(
         @InjectRepository(Task)
         private taskRepository: Repository<Task>,
+
         @InjectRepository(User)
         private userRepository: Repository<User>,
     ){}
 
-    getAllTasks() {
-        return this.taskRepository.find();
+    async getAllTasks(userId: number) {
+        return this.taskRepository.find({
+            where: { user: {id: userId}  },
+            relations: ['user'],
+        });
     }
 
-    getTaskById(id: number) {
-        return this.taskRepository.findOneBy( {id} );
+    async getTaskById(userId: number, taskId: number) {
+        return this.taskRepository.findOne({
+            where: { id: taskId, user: {id: userId} },
+            relations: ['user'],
+        });
     }
 
-    createTask(title: string, description?: string) {
-        const task = this.taskRepository.create( {title, description} );
+    async createTask( userId: number, title: string, description?: string) {
+        const user = await this.userRepository.findOne({
+            where: { id: userId },
+        });
+        if (!user) throw new Error('Пользователь не найден');
+
+        const task = this.taskRepository.create({title, description, user});
         return this.taskRepository.save(task);
     }
 
-    async updateTask(id: number, title: string, description: string, completed: boolean) {
-        await this.taskRepository.update(id, {id, title, description, completed});
+    async updateTask(taskId: number, title: string, description: string, completed: boolean) {
+        await this.taskRepository.update(taskId, {title, description, completed});
+        return this.taskRepository.findOneBy( { id: taskId } );
     }
 
-    async deleteTask(id: number) {
-        await this.taskRepository.delete(id);
-        return { deleted: true};
+    async deleteTask(taskId: number) {
+        await this.taskRepository.delete(taskId);
+        return {deleted: true};
     }
 
     getAllUser() {
-        return this.userRepository.find();
+        return this.userRepository.find({relations: ['tasks']});
     }
 
     getUserById(id: number) {
-        return this.userRepository.findOneBy({id});
+        return this.userRepository.findOne({
+            where: { id },
+            relations: ['tasks'],
+        });
     }
     
     createUser(username: string, email: string) {

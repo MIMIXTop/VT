@@ -7,7 +7,4 @@ export class CreateTaskDto {
 
     @IsString()
     description: string;
-
-    @IsInt()
-    userId: number;
 }

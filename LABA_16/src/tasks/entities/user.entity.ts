@@ -1,7 +1,8 @@
 import { IsNotEmpty, IsString } from "class-validator";
-import { Column, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Task } from "./task.entity";
 
+@Entity()
 export class User {
     @PrimaryGeneratedColumn()
     id: number
