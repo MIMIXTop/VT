@@ -1,20 +1,11 @@
 import { Injectable } from '@nestjs/common';
+import { PrismaService } from 'src/prisma.service';
 import { Repository } from 'typeorm';
-import { Task } from './entities/task.entity';
-import { InjectRepository } from '@nestjs/typeorm';
-import { User } from './entities/user.entity';
 
-Repository<Task>
 
 @Injectable()
 export class TasksService {
-    constructor(
-        @InjectRepository(Task)
-        private taskRepository: Repository<Task>,
-
-        @InjectRepository(User)
-        private userRepository: Repository<User>,
-    ){}
+    constructor( private prisma: PrismaService ){}
 
     async getAllTasks(userId: number) {
         return this.taskRepository.find({
