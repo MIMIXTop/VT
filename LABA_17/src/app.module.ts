@@ -7,6 +7,7 @@ import { User } from './tasks/entities/user.entity';
 import { Task } from './tasks/entities/task.entity';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { Role } from './tasks/entities/role.entity';
 
 @Module({
   imports: [
@@ -18,7 +19,7 @@ import { UsersModule } from './users/users.module';
       password: 'nestpass',
       database: 'nestdb',
       autoLoadEntities: true,
-      entities: [User, Task],
+      entities: [User, Task, Role],
       synchronize: true,
     }),
     TasksModule,

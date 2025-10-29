@@ -1,6 +1,7 @@
 import { IsNotEmpty, IsString } from "class-validator";
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Task } from "./task.entity";
+import { Role } from "./role.entity";
 
 @Entity()
 export class User {
@@ -19,7 +20,10 @@ export class User {
 
     @Column()
     passwordHash: string
-
+    
     @OneToMany(() => Task, (task) => task.user, {cascade: true} )
     tasks: Task[]
+
+    @ManyToMany(() => Role, (role) => role.users)
+    roles: Role[]
 }

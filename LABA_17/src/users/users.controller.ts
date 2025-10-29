@@ -1,6 +1,8 @@
-import { Body, Controller, Delete, Get, NotFoundException, Param, ParseIntPipe, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, NotFoundException, Param, ParseIntPipe, Put, UseGuards } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { UpdateUserDto } from 'src/tasks/dto/update-user.dto';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { Roles, RolesGuard } from 'src/auth/roles.guard';
 
 @Controller()
 export class UsersController {
@@ -26,6 +28,8 @@ export class UsersController {
         return { success: result };
     }
 
+    @Roles('admin')
+    @UseGuards(JwtAuthGuard, RolesGuard)
     @Delete('user/:userId')
     deleteUser(@Param('userId', ParseIntPipe) userId: number) {
         let result = this.usersService.deleteUser(userId);

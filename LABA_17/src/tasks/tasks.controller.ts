@@ -1,17 +1,20 @@
-import { Body, Controller, Delete, Get, NotFoundException, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, NotFoundException, Param, ParseIntPipe, Post, Put , UseGuards} from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @Controller()
 export class TasksController {
     constructor(private readonly taskService: TasksService) {}
 
+    @UseGuards(JwtAuthGuard)
     @Get('user/:id/tasks')
     getAllTasks(@Param('id', ParseIntPipe) id: number) {
         return this.taskService.getAllTasks(id);
     }
 
+    
     @Get('user/:userId/tasks/:taskId')
     getTaskById(@Param('userId', ParseIntPipe) userId: number, @Param('taskId', ParseIntPipe) taskId: number) {
         let result = this.taskService.getTaskById(userId, taskId);
@@ -36,7 +39,7 @@ export class TasksController {
 
         return { success: result };
     }
-
+  
     @Delete('tasks/:taskId') 
     deleteTask(@Param('taskId', ParseIntPipe) id: number) {
         let result = this.taskService.deleteTask(id);
