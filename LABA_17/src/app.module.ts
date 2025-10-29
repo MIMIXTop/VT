@@ -13,14 +13,14 @@ import { Role } from './tasks/entities/role.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'postgres',
       port: 5432,
       username: 'nestuser',
       password: 'nestpass',
       database: 'nestdb',
       autoLoadEntities: true,
-      entities: [User, Task, Role],
       synchronize: true,
+      entities: [User, Task, Role],
     }),
     TasksModule,
     AuthModule,
