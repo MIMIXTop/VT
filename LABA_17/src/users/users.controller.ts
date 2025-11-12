@@ -8,6 +8,7 @@ import { Roles, RolesGuard } from 'src/auth/roles.guard';
 export class UsersController {
     constructor(private readonly usersService: UsersService) { }
 
+    @Roles('user')
     @Get('user')
     getAllUsers() {
         return this.usersService.getAllUser();

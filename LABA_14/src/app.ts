@@ -59,6 +59,6 @@ console.log(storyString.getAll());
 
 let storyCircle = new DataStore<Circle>([new Circle(15)]);
 
-storyCircle.add(new Circle(4));
+storyCircle.add(new Rectangle(10, 4));
 
 console.log(storyCircle.getAll());
